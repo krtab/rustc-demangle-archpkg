@@ -1,0 +1,4 @@
+Two Archlinux packages:
+
+    - A new one, packaging rustc-demangle
+    - A patch for the hotspot package, using the previous to provide rust demangling
