@@ -1,6 +1,4 @@
-# Maintainer: Sven-Hendrik Haase <svenstaro@gmail.com>
-# Maintainer: Maxim Baz <$pkgname at maximbaz dot com>
-# Contributor: Andrew Gallant <jamslam@gmail.com>
+# Maintainer: Arthur Carcano <arthur dot carcano at gmail dot com>
 pkgname=rustc-demangle
 pkgver=0.1.18
 pkgrel=1
