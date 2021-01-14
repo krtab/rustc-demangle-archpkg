@@ -1,7 +1,7 @@
 # Maintainer: Arthur Carcano <arthur dot carcano at gmail dot com>
 pkgname=rustc-demangle
 pkgver=0.1.18
-pkgrel=1
+pkgrel=2
 pkgdesc="Demangling for Rust symbols, C API"
 arch=('x86_64')
 url="https://github.com/alexcrichton/rustc-demangle"
@@ -29,7 +29,7 @@ check() {
 
 package() {
   cd "$pkgname-$pkgver"
-  install -Dm644 "target/release/librustc_demangle."{a,so} --target-directory "$pkgdir/usr/lib/${pkgname}/"
-  install -Dm644 "crates/capi/include/rustc_demangle.h" --target-directory "$pkgdir/usr/include/${pkgname}/"
+  install -Dm644 "target/release/librustc_demangle."{a,so} --target-directory "$pkgdir/usr/lib/"
+  install -Dm644 "crates/capi/include/rustc_demangle.h" --target-directory "$pkgdir/usr/include/"
   install -Dm644 "LICENSE-MIT" "$pkgdir/usr/share/licenses/${pkgname}/LICENSE-MIT"
 }
