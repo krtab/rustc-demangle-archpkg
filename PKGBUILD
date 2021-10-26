@@ -13,16 +13,22 @@ sha512sums=('263a4cc2e49f1e4fdd5f665a6f9d569e1606ef9ca1708f3f8aa10e6549141805542
 
 prepare() {
   cd "$pkgname-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  export CARGO_TARGET_DIR=target
   cargo fetch
 }
 
 build() {
   cd "$pkgname-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  export CARGO_TARGET_DIR=target
   cargo build --release --frozen --package rustc-demangle-capi 
 }
 
 check() {
   cd "$pkgname-$pkgver"
+  export RUSTUP_TOOLCHAIN=stable
+  export CARGO_TARGET_DIR=target
   cargo test --release --frozen
   cargo test --release --frozen --package rustc-demangle-capi 
 }
